@@ -14,8 +14,6 @@ fi
 compdef _gnu_generic lxc-ls lxc-stop lxc-start lxc-info lxc-attach lxc-create
 compdef _gnu_generic lxc-destroy lxc-freeze lxc-unfreeze lxc-snapshot lxc-clone
 
-
-
 #############################################
 # common aliases
 
@@ -27,7 +25,7 @@ if [[ $use_sudo -eq 1 ]]; then
     alias lxcinfo='sudo lxc-info -n'
 
     # start, stop
-    alias lxcstart='sudo lxc-start -n'
+    alias lxcstart='sudo lxc-start -d -n'
     alias lxcstop='sudo lxc-stop -n'
     
     # create, destroy
